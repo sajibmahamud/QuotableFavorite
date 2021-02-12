@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div style="margin-left: 50px;" class="container text-center">
+    <form [formGroup]="authorForm">
+    <div class="row form-group">
+        <div class="col-md-5" style="border: 1px solid black;">
+            <div class="row text-right">
+                <div class="col-md-5"></div>
+                <div style="margin-left: 50px;" class="col-md-5">
+                    <button  (click)="add();count=count+1" type="submit">Add Favt</button>
+                </div>
+
+            </div>
+            <div style="margin-left: 5px;" class="row">
+                <label>Name :</label>
+                <input formControlName="name" type="text">
+            </div>
+            <div style="margin-left: 5px;" class="row">
+                <label>Bio :</label>
+                <input formControlName="bio" type="text">
+            </div>
+        </div>
+
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-5" style="border: 1px solid black;">
+            <div class="row text-right">
+                <div class="col-md-4"></div>
+                <div style="margin-left: 40px;" class="col-md-6">
+                    <button   (click)="remove()" type="submit">Remove Favt</button>
+                </div>
+
+            </div>
+            <div style="margin-left: 5px;" class="row">
+                <label>Name :</label>
+                <input type="text">
+            </div>
+            <div style="margin-left: 5px;" class="row">
+                <label>Bio :</label>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 30px;" class="row form-group">
+        <div class="col-md-5" style="border: 1px solid black;">
+            <div class="row text-right">
+                <div class="col-md-5"></div>
+                <div style="margin-left: 50px;" class="col-md-5">
+                    <button (click)="show()" type="submit">Show</button>
+                </div>
+
+            </div>
+            <div style="margin-left: 5px;" class="row">
+                    <label>Name :</label>
+                    <input formControlName="showName"  type="text">
+                
+            </div>
+            <div style="margin-left: 5px;" class="row">
+                <label>Bio :</label>
+                <input formControlName="showBio" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <table style="width: 500px;border: black;">
+            <tr style="border: 1px solid black;">
+              <th style="border: 1px solid black;">Name</th>
+              <th style="border: 1px solid black;">Bio</th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black;">{{name}}</td>
+              <td style="border: 1px solid black;">{{bio}}</td>
+            </tr>
+            <tr>
+              
+            </tr>
+          </table>
+    </div>
+    <div class="row" style="border: 1px solid black;margin-top: 50px;">
+        <div class="col text-center"><i class="fal fa-arrow-alt-right"></i> <b> page:2 </b> <span class="fas fa-edit"></span></div>
+    </div>
+</form>
+</div>

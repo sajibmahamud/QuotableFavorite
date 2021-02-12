@@ -1,0 +1,13 @@
+<table style="width: 800px;">
+    <tr  style="border: 1px solid black;">
+      <th  style="border: 1px solid black;">Name</th>
+      <th  style="border: 1px solid black;">Bio</th>
+      <th  style="border: 1px solid black;">Link</th>
+    </tr>
+    <tr *ngFor="let item of ListOfComponent">
+      <td  style="border: 1px solid black;">{{item.name}}</td>
+      <td  style="border: 1px solid black;">{{item.bio}}</td>
+      <td  style="border: 1px solid black;">{{item.link}}</td>
+    </tr>
+  </table>
+  
